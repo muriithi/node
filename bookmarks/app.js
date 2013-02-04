@@ -1,6 +1,6 @@
 var express = require('express')
 	, stylus = require('stylus')
-	, nib = require('nib')
+	, nib = require('nib');
 	
 	
 var app = express();
@@ -8,7 +8,7 @@ var app = express();
 function compile(str, path){
 	return stylus(str)
 	.set('filename' ,path)
-	.use(nib())
+	.use(nib());
 }
 
 app.set('views' , __dirname + '/views');
@@ -24,6 +24,10 @@ app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req ,res){
 	res.end("Hi there!");
-})	
+});
+
+app.get('/yoo', function(req, res){
+	res.end('Yoooooo!');
+});
 
 app.listen(3000);

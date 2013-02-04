@@ -6,7 +6,10 @@
 		"express" : "*",
 		"jade" : "*",
 		"stylus" : "*",
-		"nib" : "*"
+		"nib" : "*",
+		"mongoose" : "*",
+		"passport" : "*"
+		
 
 	}
 
